@@ -209,7 +209,7 @@ input:focus {
   margin: 1rem auto;
   padding: 0.5rem 2rem;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(17rem, 1fr));
 }
 
 #backdrop {
@@ -272,13 +272,59 @@ input:focus {
   min-width: 100%;
   min-height: 100%;
   background-color: #f0f0f0;
-  /* display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #555;
-  font-size: 16px; */
 }
 
 .overlay h2 {
   color: #ffffff;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo > img {
+  height: 35px;
+}
+
+.logo-txt {
+  padding-left: 7px;
+  display: flex;
+  flex-direction: column;
+  color: #ffffff;
+  align-items: flex-start;
+}
+
+.logo-img {
+  width: 2rem;
+  margin-right: 3px;
+}
+
+.logo-txt h1,
+.logo-txt span {
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  letter-spacing: 4px;
+  color: #ffffff;
+}
+
+.logo-txt h1 {
+  font-weight: bolder;
+  font-size: 1.1rem;
+  margin-top: 2px;
+}
+
+.logo-txt span {
+  font-weight: lighter;
+  font-size: 0.85rem;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+}
+
+a {
+  text-decoration: none;
 }
