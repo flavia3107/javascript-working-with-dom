@@ -1,14 +1,9 @@
 const addMovieModal = document.getElementById('add-modal');
-// const addMovieModal = document.querySelector('#add-modal');
-// const addMovieModal = document.body.children[1];
 const startAddMovieButton = document.querySelector('header button');
-// const startAddMovieButton = document.querySelector('header').lastElementChild;
 const backdrop = document.getElementById('backdrop');
-// const backdrop = document.body.firstElementChild;
 const cancelAddMovieButton = addMovieModal.querySelector('.btn--passive');
 const confirmAddMovieButton = cancelAddMovieButton.nextElementSibling;
 const userInputs = addMovieModal.querySelectorAll('input');
-// const userInputs = addMovieModal.getElementsByTagName('input');
 const entryTextSection = document.getElementById('entry-text');
 const deleteMovieModal = document.getElementById('delete-modal');
 
@@ -42,7 +37,6 @@ const deleteMovieHandler = movieId => {
   movies.splice(movieIndex, 1);
   const listRoot = document.getElementById('movie-list');
   listRoot.children[movieIndex].remove();
-  // listRoot.removeChild(listRoot.children[movieIndex]);
   closeMovieDeletionModal();
   updateUI();
 };
@@ -57,9 +51,6 @@ const startDeleteMovieHandler = movieId => {
   confirmDeletionButton.replaceWith(confirmDeletionButton.cloneNode(true));
 
   confirmDeletionButton = deleteMovieModal.querySelector('.btn--danger');
-
-  // confirmDeletionButton.removeEventListener('click', deleteMovieHandler.bind(null, movieId)); // will not work :(
-    
   cancelDeletionButton.removeEventListener('click', closeMovieDeletionModal);
 
   cancelDeletionButton.addEventListener('click', closeMovieDeletionModal);
@@ -73,13 +64,13 @@ const renderNewMovieElement = (id, title, imageUrl, rating) => {
   const newMovieElement = document.createElement('li');
   newMovieElement.className = 'movie-element';
   newMovieElement.innerHTML = `
-    <div class="movie-element__image">
-      <img src="${imageUrl}" alt="${title}">
-    </div>
-    <div class="movie-element__info">
+  <div class="movie-element__image">
+    <img src="${imageUrl}" onerror="this.className='error-class';">
+    <div class="overlay">
       <h2>${title}</h2>
-      <p>${rating}/5 stars</p>
+      <p>Rate: ${rating}/5</p>
     </div>
+  </div>
   `;
   newMovieElement.addEventListener(
     'click',
@@ -94,7 +85,6 @@ const closeMovieModal = () => {
 };
 
 const showMovieModal = () => {
-  // function() {}
   addMovieModal.classList.add('visible');
   toggleBackdrop();
 };
