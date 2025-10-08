@@ -37,9 +37,7 @@ header button {
 
 header button:hover,
 header button:active {
-  background: #53a7ce;
-  border-color: #53a7ce;
-  color: #ffffff;
+  box-shadow: 0 0 2px 1px #929292;
 }
 
 label {
@@ -63,8 +61,8 @@ input:focus {
 .btn {
   font: inherit;
   padding: 0.5rem 1.5rem;
-  border: 1px solid #101e3b;
-  background: #101e3b;
+  border: 1px solid #232323;
+  background: #232323;
   color: white;
   border-radius: 6px;
   box-shadow: 0 1px 8px rgba(0, 0, 0, 0.26);
@@ -74,12 +72,11 @@ input:focus {
 
 .btn:hover,
 .btn:active {
-  background: #53a7ce;
-  border-color: #53a7ce;
+  background: #414141;
 }
 
 .btn--passive {
-  color: #101e3b;
+  color: #232323;
   background: transparent;
   border: none;
   box-shadow: none;
@@ -87,13 +84,15 @@ input:focus {
 
 .btn--passive:hover,
 .btn--passive:active {
-  background: #aec6f8;
+  background: #e2e2e2;
 }
 
 .btn--danger {
-  background: #d30808;
+  background: #e00000;
   color: white;
-  border-color: #d30808;
+  border-color: #e00000;
+  box-shadow: none;
+  margin: 0;
 }
 
 .btn--danger:hover,
@@ -125,14 +124,14 @@ input:focus {
 .modal .modal__title {
   margin: 0;
   padding: 1rem;
-  border-bottom: 1px solid #101e3b;
-  background: #101e3b;
-  color: white;
+  color: #232323;
   border-radius: 10px 10px 0 0;
 }
 
 .modal .modal__content {
   padding: 1rem;
+  color: #6e6e6e;
+  margin: 0;
 }
 
 .modal .modal__actions {
@@ -204,6 +203,13 @@ input:focus {
   padding: 0.5rem 2rem;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+  max-width: 80%;
+  margin: 0 auto;
+  box-shadow: 0 0 2px 1px #d3d3d3;
+  height: calc(100vh - 10rem);
+  background: #d3d3d30f;
+  border-radius: 5px;
+  overflow: auto;
 }
 
 #backdrop {
