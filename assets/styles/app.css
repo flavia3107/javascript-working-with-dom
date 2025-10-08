@@ -4,10 +4,12 @@
 
 html {
   font-family: sans-serif;
+  min-height: 100%;
 }
 
 body {
   margin: 0;
+  background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
 }
 
 button:focus {
@@ -20,19 +22,17 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 2.5rem;
-  background: #101e3b;
+  padding: 0 1rem;
 }
 
 header button {
   font: inherit;
   padding: 0.5rem 1rem;
-  background: #216f93;
-  border: 1px solid #216f93;
-  color: white;
-  border-radius: 6px;
-  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.26);
+  border: none;
+  color: #232323;
+  border-radius: 5px;
   cursor: pointer;
+  box-shadow: 0 0 2px 1px #bdbdbd;
 }
 
 header button:hover,
@@ -203,7 +203,7 @@ input:focus {
   margin: 1rem auto;
   padding: 0.5rem 2rem;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(17rem, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
 }
 
 #backdrop {
